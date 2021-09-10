@@ -5,12 +5,16 @@ import Expedition from './Expedition'
 
 
 
+
+
+
 const Home = () => {
     return ( 
         <React.Fragment>
             <VideoBanner />
             <Introduction />
             <Expedition />
+
 
         </React.Fragment>
      );
