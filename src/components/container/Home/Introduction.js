@@ -8,7 +8,7 @@ const Introduction = () => {
                     <div className="row">
                         <div className="col-md-8">
                             <div className="intro-head">
-                                <h4 className="heading-text">Love & Persistence in climbing mountains have transformed life</h4>
+                                <h4 className="heading-text">Love and Persistence in climbing mountains</h4>
                             </div>
         
                             <div className="intro-text" >
@@ -35,7 +35,7 @@ const Introduction = () => {
 
                         <div className="col-md-4">
                             <div className="intro-img">
-                                <img src="./images/intro-img.jpg"></img>
+                                <img src="./images/intro-img.jpg" alt="" />
                             </div>
                         </div>
 

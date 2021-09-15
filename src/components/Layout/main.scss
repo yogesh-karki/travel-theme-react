@@ -165,11 +165,11 @@ header {
         z-index: 3;
         text-align: center;
 
-        h2 {
+        h1 {
             color: #fff;
-            width: 590px;
+            width: 740px;
             margin: auto;
-            font-size: 68px;
+            font-size: 88px;
             font-family: 'Kudryashev Headline';
             font-weight: 700;
             line-height: 1.18;
@@ -206,7 +206,7 @@ header {
     }
 
     .intro-head {
-        width: 450px;
+        width: 390px;
     }
 
     .intro-text {
@@ -364,8 +364,8 @@ header {
 
 .destinations {
     min-height: 987px;
-    background-position: center;
-    background-size: cover;
+    background-position: center !important;
+    background-size: cover !important;
     position: relative;
 
     .destinations-head {
@@ -498,7 +498,7 @@ header {
     .ch-item-des {
         h4 {
             font-size: 22px;
-            font-weight: 300;
+            font-weight: 700;
             margin-bottom: 10px;
         }
 
@@ -548,6 +548,11 @@ header {
         flex-shrink: 0;
         z-index: 2;
         margin-top: 50px;
+        
+
+        .heading-text {
+            color: #fff;
+        }
 
         p {
             font-size: 17px;
@@ -558,8 +563,8 @@ header {
 
     .story-play {
         background: #1a1e17;
-        width: 50px;
-        height: 50px;
+        width: 70px;
+        height: 70px;
         position: absolute;
         top: 50%;
         left: 50%;
@@ -569,9 +574,24 @@ header {
         align-items: center;
         justify-content: center;
         cursor: pointer;
+        transition: 1.3s;
+
+        &::after {
+            position: absolute;
+            content: '';
+            width: 120%;
+            height: 120%;
+            background: transparent;
+            border: 1px solid #1a1e17;
+            border-radius: 50%;
+        }
 
         &:hover {
             background: #da8d00;
+
+            &::after {
+                border: 1px solid #da8d00;
+            }
         }
 
         img {
@@ -581,6 +601,25 @@ header {
             margin-left: 5px;
         }
        
+    }
+
+    .media-story {
+        overflow: hidden;
+        cursor: pointer;
+
+        img {
+            transition: 1.3s;
+        }
+         
+        &:hover {
+            img {
+                transform: scale(1.1)
+            }
+
+            .story-play {
+                transform: scale(0.9) translate(-50%,-50%);
+            }
+        }
     }
 
     .story-right {

@@ -173,11 +173,11 @@ header .nav-container nav ul li a .nav-item .subtitle {
   text-align: center;
 }
 
-.banner .banner-text h2 {
+.banner .banner-text h1 {
   color: #fff;
-  width: 590px;
+  width: 740px;
   margin: auto;
-  font-size: 68px;
+  font-size: 88px;
   font-family: 'Kudryashev Headline';
   font-weight: 700;
   line-height: 1.18;
@@ -210,7 +210,7 @@ header .nav-container nav ul li a .nav-item .subtitle {
 }
 
 .intro-container .intro-head {
-  width: 450px;
+  width: 390px;
 }
 
 .intro-container .intro-text {
@@ -380,8 +380,8 @@ header .nav-container nav ul li a .nav-item .subtitle {
 
 .destinations {
   min-height: 987px;
-  background-position: center;
-  background-size: cover;
+  background-position: center !important;
+  background-size: cover !important;
   position: relative;
 }
 
@@ -515,7 +515,7 @@ header .nav-container nav ul li a .nav-item .subtitle {
 
 .why-choose .ch-item-des h4 {
   font-size: 22px;
-  font-weight: 300;
+  font-weight: 700;
   margin-bottom: 10px;
 }
 
@@ -568,14 +568,18 @@ header .nav-container nav ul li a .nav-item .subtitle {
   margin-top: 50px;
 }
 
+.stories .story-header-content .heading-text {
+  color: #fff;
+}
+
 .stories .story-header-content p {
   font-size: 17px;
 }
 
 .stories .story-play {
   background: #1a1e17;
-  width: 50px;
-  height: 50px;
+  width: 70px;
+  height: 70px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -592,10 +596,26 @@ header .nav-container nav ul li a .nav-item .subtitle {
       -ms-flex-pack: center;
           justify-content: center;
   cursor: pointer;
+  -webkit-transition: 1.3s;
+  transition: 1.3s;
+}
+
+.stories .story-play::after {
+  position: absolute;
+  content: '';
+  width: 120%;
+  height: 120%;
+  background: transparent;
+  border: 1px solid #1a1e17;
+  border-radius: 50%;
 }
 
 .stories .story-play:hover {
   background: #da8d00;
+}
+
+.stories .story-play:hover::after {
+  border: 1px solid #da8d00;
 }
 
 .stories .story-play img {
@@ -604,6 +624,26 @@ header .nav-container nav ul li a .nav-item .subtitle {
   -o-object-fit: contain !important;
      object-fit: contain !important;
   margin-left: 5px;
+}
+
+.stories .media-story {
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.stories .media-story img {
+  -webkit-transition: 1.3s;
+  transition: 1.3s;
+}
+
+.stories .media-story:hover img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.stories .media-story:hover .story-play {
+  -webkit-transform: scale(0.9) translate(-50%, -50%);
+          transform: scale(0.9) translate(-50%, -50%);
 }
 
 .stories .story-right {
