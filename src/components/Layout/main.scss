@@ -343,9 +343,41 @@ header {
 
     .activity-card {
         position: relative;
+        cursor: pointer;
+        overflow: hidden;
+
+        &:hover {
+            img {
+                transform: scale(1.04);
+            }
+
+            &::after {
+                opacity: 1;
+                transform:translateY(0)
+            }
+        }
+
+        &::after {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            content: "";
+            background:linear-gradient(0deg, rgb(20, 20, 20), rgb(32, 32, 32) 15%, transparent);
+            z-index: 1;
+            transition: 1s;
+            opacity: 0;
+            transform:translateY(100px)
+        }
 
         a {
             color: #fff;
+            
+        }
+
+        img {
+            transition: 1s;
         }
 
         .title-card {
@@ -353,11 +385,13 @@ header {
             position: absolute;
             top: 20px;
             left: 20px;
+            z-index: 2;
             align-items: center;
 
             h5 {
                 margin-left: 10px;
                 color: #fff;
+                text-shadow: 1px 3px 1px rgba(72, 65, 65, 0.5);
               
             }
 
@@ -374,7 +408,7 @@ header {
                 img {
                     height: 40px;
                     width: 40px;
-                    border: 1px dotted #000;
+                    // border: 1px dotted #000;
                     border-radius: 50%;
                     object-fit: contain;
                     padding: 3px;
