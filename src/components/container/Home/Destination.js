@@ -1,6 +1,7 @@
 import React from 'react';
 import Marker from './Marker'
 import MarkerData from './MarkerData'
+import UpdateData from '../Update/UpdateData'
 
 
 const Destination = () => {
@@ -33,35 +34,35 @@ const Destination = () => {
 
                     </div>
 
-                    <div class="why-choose">
-                        <div class="ch-item">
-                            <ion-icon name="ribbon-outline" role="img" class="md hydrated" aria-label="ribbon outline"></ion-icon>
+                    <div className="why-choose">
+                        <div className="ch-item">
+                            <ion-icon name="ribbon-outline" role="img" className="md hydrated" aria-label="ribbon outline"></ion-icon>
 
-                            <div class="ch-item-des">
-                                <h4>UNLIMITED PACKAGE</h4>
+                            <div className="ch-item-des">
+                                <h4>Unlimited Pacakge</h4>
                                 <p>Build a tailor made trip 
                                     in less time
                                 </p>
                             </div>
                         </div>
 
-                        <div class="ch-item">
-                            <ion-icon name="flower-outline" role="img" class="md hydrated" aria-label="flower outline"></ion-icon>
+                        <div className="ch-item">
+                            <ion-icon name="flower-outline" role="img" className="md hydrated" aria-label="flower outline"></ion-icon>
 
-                            <div class="ch-item-des">
-                                <h4>EASY BOOKING</h4>
+                            <div className="ch-item-des">
+                                <h4>Easy Booking</h4>
                                 <p>Build a tailor made trip 
                                     in less time
                                 </p>
                             </div>
                         </div>
 
-                        <div class="ch-item">
-                            <ion-icon name="finger-print-outline" role="img" class="md hydrated" aria-label="finger print outline"></ion-icon>
+                        <div className="ch-item">
+                            <ion-icon name="finger-print-outline" role="img" className="md hydrated" aria-label="finger print outline"></ion-icon>
 
-                            <div class="ch-item-des">
+                            <div className="ch-item-des">
                                 
-                                <h4>SERVICE EXCELLENCE</h4>
+                                <h4>Service Booking</h4>
                                 <p>Build a tailor made trip 
                                     in less time
                                 </p>

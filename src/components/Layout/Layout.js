@@ -11,7 +11,7 @@ const Layout = () => {
             <NavBar />
 
             <Home />
-        </ React.Fragment>
+        </React.Fragment>
      );
 }
  

@@ -3,9 +3,9 @@ import React from 'react';
 const NavBar = () => {
     return ( 
         <header>
-                <div class="container">
-                    <div class="nav-container">
-                        <div class="logo">
+                <div className="container">
+                    <div className="nav-container">
+                        <div className="logo">
                             <a href="index.html">
                                 <img src="./images/assets/logo-color.svg" alt="" />
                             </a>
@@ -15,49 +15,49 @@ const NavBar = () => {
                             <ul>
                                 <li>
                                     <a href="">
-                                        <div class="nav-item">
+                                        <div className="nav-item">
                                             Who we are
 
-                                            <span class="subtitle">About Us</span>
+                                            <span className="subtitle">About Us</span>
                                         </div>
                                     </a>
                                 </li>
 
                                 <li>
                                     <a href="">
-                                        <div class="nav-item">
+                                        <div className="nav-item">
                                             Expedition
 
-                                            <span class="subtitle">Services</span>
+                                            <span className="subtitle">Services</span>
                                         </div>
                                     </a>
                                 </li>
 
                                 <li>
                                     <a href="">
-                                        <div class="nav-item">
+                                        <div className="nav-item">
                                             Breathless
-                                            <span class="subtitle">World Highest Race</span>
+                                            <span className="subtitle">World Highest Race</span>
                                         </div>
                                     </a>
                                 </li>
 
                                 <li>
                                     <a href="">
-                                        <div class="nav-item">
+                                        <div className="nav-item">
                                             Useful Info
 
-                                            <span class="subtitle">A Tour Guide</span>
+                                            <span className="subtitle">A Tour Guide</span>
                                         </div>
                                     </a>
                                 </li>
 
                                 <li>
                                     <a href="">
-                                        <div class="nav-item">
+                                        <div className="nav-item">
                                             Tailor-made Trips
 
-                                            <span class="subtitle">& individually</span>
+                                            <span className="subtitle">& individually</span>
                                         </div>
                                     </a>
                                 </li>
