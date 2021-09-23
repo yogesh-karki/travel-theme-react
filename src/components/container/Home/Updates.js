@@ -20,16 +20,14 @@ const Updates = () => {
                     </div>
                 </div>
 
-                <Swiper slidesPerView={4} centeredSlides={true} spaceBetween={30} pagination={{
-                    "clickable": true
-                    }} className="latest-slider ">
+                <Swiper slidesPerView={4} centeredSlides={true} spaceBetween={30}  navigation={true}  className="latest-slider white-navigation ">
                         
                     {
                         UpdateData.map((val, index) => {
                             return (
-                                <SwiperSlide>
+                                <SwiperSlide key={index}>
                                     <UpdateCard 
-                                    key={index}
+                                    
                                     img={val.img}
                                     title={val.title}
                                     description= {val.description} 

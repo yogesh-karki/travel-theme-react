@@ -1,6 +1,8 @@
 import React , {useEffect, useRef} from 'react'
 import gsap from 'gsap';
+import {ScrollTrigger} from 'gsap/dist/ScrollTrigger';
 
+gsap.registerPlugin(ScrollTrigger);
 
 const TopFooter = () => {
     const topImg= useRef();
@@ -12,12 +14,87 @@ const TopFooter = () => {
     const slideTwo = useRef();
 
     useEffect(() =>{
-        var t1 = new gsap.timeline();
 
-        t1.from('.top-img', {
-            y: 500,
-            duration: 3,
-        }) 
+        gsap.to(logoText.current, {
+            scrollTrigger: {
+                trigger: ".footer-animations",
+                start: 'top top',
+                end: "bottom bottom",
+                scrub: 1
+            },
+            scale: 1.1,
+            y: -400
+        })
+
+        var t1 = new gsap.timeline(
+            {
+                scrollTrigger: {
+                    trigger: ".footer-animations",
+                    start: 'top top',
+                    end: "bottom bottom",
+                    scrub: 3,
+                    pin: true,
+                  }
+            }
+        );
+
+        t1.fromTo(bottomImg.current,{
+            y: 0,
+        },{
+            y: -150
+        })
+
+        t1.fromTo(topImg.current, {
+            scale: 1
+        }, { 
+            scale: 1.3
+        },0);
+
+
+        var tlClouds = new gsap.timeline({
+            scrollTrigger: {
+                trigger: ".footer-animations",
+                start: 'top center',
+                end: "bottom bottom",
+                scrub: 3,
+                duration: 10
+            }
+        })
+
+        tlClouds.fromTo(cloudLeft.current, {
+            x: -100,
+            opacity: 0.6
+        },{
+            xPercent: 100,
+            scale: 1.2,
+            opacity: 1
+        })
+
+        tlClouds.fromTo(cloudRight.current, {
+            x: 100,
+            opacity: 0.8
+        },{
+            xPercent: -100,
+            scale: 1.2,
+            opacity: 1
+        },0)
+
+
+        const clouds = document.querySelectorAll('.cloud-slides')
+
+        for(let i = 0; i < clouds.length; i++) {
+            gsap.fromTo(clouds[i], {
+                x: -1702.41,
+                y:  200
+            }, {
+                duration: 15,
+                x: 0,
+                repeat: 1,
+                esae: 'none',
+                y: -200
+            })
+        }
+
     })
 
     return ( 

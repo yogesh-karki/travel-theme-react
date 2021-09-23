@@ -1,7 +1,6 @@
 import React from 'react';
 import Marker from './Marker'
 import MarkerData from './MarkerData'
-import UpdateData from '../Update/UpdateData'
 
 
 const Destination = () => {
@@ -9,6 +8,8 @@ const Destination = () => {
     return ( 
         <React.Fragment>
             <section className="destinations" style = {{ background: 'url(/images/destinations-background.png)' }}>
+                <div className="destination-cloud "></div>
+
                 <div className="container">
                     <div className="destinations-head">
                         <span className="heading-subtitle">Experience Awaits</span>

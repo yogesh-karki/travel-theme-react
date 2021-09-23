@@ -13,7 +13,7 @@ $dark-blue: #151727;
 
 .btn-style.dark {
     span {
-        border: 1px solid #000;
+        border: 1px solid #999;
     }
 
     color: #000;
@@ -34,6 +34,8 @@ header {
     z-index: 3;
     width: 100%;
     padding: 10px;
+    // background: linear-gradient(1deg, rgba(255,255,255,0) 15%, rgba(0,0,0,0.3) 100%);
+
 
     .nav-container {
         display: flex;
@@ -124,7 +126,7 @@ header {
         height: 100%;
         top: 0;
         left: 0;   
-        background: rgba(0, 0, 0, 0.2);
+        background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0));
         z-index: 2;
 
     }
@@ -287,9 +289,7 @@ header {
     padding: 120px 0;
     position: relative;
     background: #e6f5fa;
-    
-
-
+    position: relative;
 
     .activity-head {
         display: flex;
@@ -427,6 +427,47 @@ header {
     background-size: cover !important;
     position: relative;
 
+    .destination-cloud {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+
+        &::before {
+            position: absolute;
+            display: block;
+            content: "";
+            top: 40%;
+            width: 100%;
+            height: 360px;
+            z-index: 1;
+            opacity: 0.2;
+            background: url(../../clouds-dest.png);
+            transform: translateZ(0) scaleY(-1);
+            transition: cubic-bezier(.25,.46,.45,.94);
+            animation: moveCloud1 30s linear infinite;
+        }
+
+        &::after {
+            position: absolute;
+            display: block;
+            content: "";
+            bottom: 10px;
+            width: 100%;
+            height: 450px;
+            z-index: 1;
+            opacity: 0.1;
+            background: url(../../clouds-dest.png);
+            transform: translateZ(0) scaleY(-1);
+            transition: cubic-bezier(.25,.46,.45,.94);
+            animation: moveCloud2 30s linear infinite;
+
+        }
+
+        
+    }
+
     .destinations-head {
         position: absolute;
         top: 10%;
@@ -445,6 +486,7 @@ header {
         width: 1173px;
         margin: 0 auto;
         margin-top: 250px;
+        z-index: 3;
 
         img {
             width: 100%;
@@ -543,6 +585,8 @@ header {
     display: flex;
     justify-content: space-around;
     padding: 50px 0 80px;
+    position: relative;
+    z-index: 2;
 
     .ch-item {
         display: flex;
@@ -571,12 +615,13 @@ header {
 }
 
 .stories {
-    background: $dark-blue;
     padding: 80px 0;
     color: #fff;
     min-height: 850px;
     position: relative;
     padding-bottom: 300px;
+    background-size: cover !important;
+    background-position: center !important;
 
     .scrub-head {
         margin-bottom: 50px;
@@ -813,7 +858,8 @@ header {
 
                 h5 {
                     font-size: 26px;
-                    margin-bottom: 5px;
+                    margin-bottom: 10px;
+                    color: #fff;
                 }
 
                 span {
@@ -824,6 +870,8 @@ header {
                 p {
                     width: 80%;
                     margin: 10px auto;
+                    font-size: 17px;
+                    font-weight: 200;
                 }
 
             }
@@ -1001,10 +1049,43 @@ section.anim-wrap {
 
 footer {
     padding: 80px 0;
+    position: relative;
     padding-top: 200px;
     min-height: 450px;
     background-position: center !important;
-    background-size: cover !important;
+    background-size: auto 100% !important;
+    overflow: hidden;
+
+    .footer-background {
+        display: block;
+        position: absolute;
+        width: 100% ;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-repeat: repeat-x !important;
+        background-position: 0 0 !important;
+        background-position-x: 0px !important;
+        background-position-y: 0px !important;
+        background-size: 50% auto !important;
+        z-index: 1;
+    }
+
+    .footer-background.background-far {
+        opacity: 0.5;
+        animation: footerCloudAnim 20s infinite linear;
+    }
+
+    .footer-background.background-near {
+        opacity: .5;
+        width: 800%;
+        animation: footerCloudAnim 85s infinite linear;
+    }
+
+    .container {
+        position: relative;
+        z-index: 5;
+    }
 
     .footer-bottom {
         margin-top: 80px;
@@ -1132,56 +1213,176 @@ footer {
     }
 }
 
-// .footer-top {
-//     margin-bottom: 30px;
-//     .ft-wrap {
-//         display: flex;
-//         justify-content: space-between;
-//         margin: 15px 0;
-//         align-items: center;
-//     }
+.white-navigation {
 
-//     .ft-card {
-//         img {
-//             width: 50px;
-//             height: 50px;
-//             object-fit: contain;
-//             margin-right: 15px;
-//         }
+    .swiper-button-disabled {
+        opacity: 0;
+    } 
 
-//         h4 {
-//             font-size: 24px;
-//             margin-bottom: 30px;
-//             font-weight: 200;
-//             text-transform: uppercase;
-//         }
+    .swiper-button-prev, .swiper-button-next {
+        background: #fff;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        transition: 0.5s;
 
-//         &:nth-child(2) {
-//             img {
-//                 width: 206px;
-//                 height: 130px;
-//                 margin-top: 50px;
-//             }
-//         }
+        &:hover {
+            &::before {
+                transform: scale(1.5) ;
+            }
+        }
 
-//         &:last-child {
-//             h4 {
-//                 text-align: right;
-//             }
-//             .accept-img {
-//                 text-align: right;
-//             }
+        &::before {
+            position: absolute;
+            content: " ";
+            width: 100%;
+            height: 100%;
+            background: #fff;
+            border-radius: 50%;
+            z-index: -1;
+            transition: 0.5s;
+        }
+        
+        &::after {
+            color: #333;
+            font-size: 17px;
+        }   
+    }
 
-//             img {
-//                 &:last-child {
-//                     margin-right: 0;
-//                 }
-//             }
-//         }
-//     }
-    
-    
-// }
+    .swiper-button-prev {
+        left: 10%;
+    }
+
+    .swiper-button-next {
+        right: 10%;
+    }
+
+}
+
+.testimonials {
+    position: relative;
+
+    .swiper-pagination  {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+
+        .swiper-pagination-bullet {
+            background: #fff;
+            margin: 2px;
+            width: 10px;
+            height: 10px;
+        }
+
+    }
+}
+
+.inner-banner {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+
+    &:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0));
+        z-index: 2;
+    }
+
+    .ib-bg {
+        background-position: center !important;
+        background-size: cover !important;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: scale(1.2)
+    }
+
+    .text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        z-index: 4;
+        text-align: center;
+        color: #ffff;
+
+        h2 {
+            color: #fff;
+            width: 740px;
+            margin: auto;
+            font-size: 68px;
+            font-family: 'Ivy Mode';
+            font-weight: 600;
+            line-height: 1.18;
+            text-shadow: 1px 3px 1px rgba(72, 65, 65, 0.5);
+        }
+
+
+    }
+}
+
+.features {
+    background-color: $dark-blue;
+    padding: 80px 0;
+}
+
+.feature-wrap {
+    display: flex;
+    justify-content: space-around; 
+}
+
+.feature-card {
+    color: #fff;
+    display: flex;
+    align-items: center;
+
+    img {
+
+        width: 40px;
+        height: 40px;
+        margin-right: 20px
+    }
+
+    .card-desc {
+        p {
+            font-size: 12px;
+            margin-bottom: 5px;
+            line-height: 1;
+            text-transform: uppercase;
+            opacity: 0.8;
+        }
+
+        h6 {
+            color: #fff;
+            font-size: 20px;
+            line-height:1
+        }
+    }
+}
+
+
+.book-btn {
+    border: 0;
+    padding: 0 15px;
+    height: 62px;
+    text-transform: uppercase;
+    color: #fff;
+    background: #151727;
+    margin-top: 0px;
+    font-weight: 100;
+
+    ion-icon {
+        margin-right: 5px;
+    }
+}
 
 
 @keyframes rotation {
@@ -1191,5 +1392,57 @@ footer {
 
     to {
         transform: rotate(359deg);
+    }
+}
+
+@keyframes footerCloudAnim {
+    0% {
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+    }
+    to {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
+
+@keyframes moveCloud1 {
+    0% {
+        opacity: 1;
+        background-position: 0 0;
+    }
+    30% {
+        opacity: 0.5;
+    }
+    60% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+        background-position: 817px 0;
+    }
+}
+
+
+@keyframes moveCloud2 {
+    0% {
+        opacity: 0.1;
+        background-position: 408px 0;
+    }
+    30% {
+        opacity: 0.4;
+    }
+    60% {
+        opacity: 0.2;
+    }
+    80% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 0.4;
+        background-position: 1225px 0;
     }
 }

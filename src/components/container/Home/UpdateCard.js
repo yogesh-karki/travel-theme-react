@@ -1,5 +1,5 @@
 import React from 'react';
-import {ButtonDark , ButtonWhite} from '../../Button';
+import {ButtonDark } from '../../Button';
 
 
 const UpdateCard = ( props ) => {

@@ -7,7 +7,7 @@
 }
 
 .btn-style.dark span {
-  border: 1px solid #000;
+  border: 1px solid #999;
 }
 
 .btn-style.light {
@@ -114,7 +114,8 @@ header .nav-container nav ul li a .nav-item .subtitle {
   height: 100%;
   top: 0;
   left: 0;
-  background: rgba(0, 0, 0, 0.2);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0)));
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0));
   z-index: 2;
 }
 
@@ -290,6 +291,7 @@ header .nav-container nav ul li a .nav-item .subtitle {
   padding: 120px 0;
   position: relative;
   background: #e6f5fa;
+  position: relative;
 }
 
 .activities .activity-head {
@@ -441,6 +443,50 @@ header .nav-container nav ul li a .nav-item .subtitle {
   position: relative;
 }
 
+.destinations .destination-cloud {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.destinations .destination-cloud::before {
+  position: absolute;
+  display: block;
+  content: "";
+  top: 40%;
+  width: 100%;
+  height: 360px;
+  z-index: 1;
+  opacity: 0.2;
+  background: url(../../clouds-dest.png);
+  -webkit-transform: translateZ(0) scaleY(-1);
+          transform: translateZ(0) scaleY(-1);
+  -webkit-transition: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -webkit-animation: moveCloud1 30s linear infinite;
+          animation: moveCloud1 30s linear infinite;
+}
+
+.destinations .destination-cloud::after {
+  position: absolute;
+  display: block;
+  content: "";
+  bottom: 10px;
+  width: 100%;
+  height: 450px;
+  z-index: 1;
+  opacity: 0.1;
+  background: url(../../clouds-dest.png);
+  -webkit-transform: translateZ(0) scaleY(-1);
+          transform: translateZ(0) scaleY(-1);
+  -webkit-transition: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -webkit-animation: moveCloud2 30s linear infinite;
+          animation: moveCloud2 30s linear infinite;
+}
+
 .destinations .destinations-head {
   position: absolute;
   top: 10%;
@@ -459,6 +505,7 @@ header .nav-container nav ul li a .nav-item .subtitle {
   width: 1173px;
   margin: 0 auto;
   margin-top: 250px;
+  z-index: 3;
 }
 
 .destinations .nepal-map img {
@@ -555,6 +602,8 @@ header .nav-container nav ul li a .nav-item .subtitle {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   padding: 50px 0 80px;
+  position: relative;
+  z-index: 2;
 }
 
 .why-choose .ch-item {
@@ -583,12 +632,13 @@ header .nav-container nav ul li a .nav-item .subtitle {
 }
 
 .stories {
-  background: #151727;
   padding: 80px 0;
   color: #fff;
   min-height: 850px;
   position: relative;
   padding-bottom: 300px;
+  background-size: cover !important;
+  background-position: center !important;
 }
 
 .stories .scrub-head {
@@ -839,7 +889,8 @@ header .nav-container nav ul li a .nav-item .subtitle {
 
 .tailor-made .testimonials .testimonial-item .ti-desc h5 {
   font-size: 26px;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
+  color: #fff;
 }
 
 .tailor-made .testimonials .testimonial-item .ti-desc span {
@@ -850,6 +901,8 @@ header .nav-container nav ul li a .nav-item .subtitle {
 .tailor-made .testimonials .testimonial-item .ti-desc p {
   width: 80%;
   margin: 10px auto;
+  font-size: 17px;
+  font-weight: 200;
 }
 
 .featured {
@@ -1006,10 +1059,45 @@ section.anim-wrap {
 
 footer {
   padding: 80px 0;
+  position: relative;
   padding-top: 200px;
   min-height: 450px;
   background-position: center !important;
-  background-size: cover !important;
+  background-size: auto 100% !important;
+  overflow: hidden;
+}
+
+footer .footer-background {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-repeat: repeat-x !important;
+  background-position: 0 0 !important;
+  background-position-x: 0px !important;
+  background-position-y: 0px !important;
+  background-size: 50% auto !important;
+  z-index: 1;
+}
+
+footer .footer-background.background-far {
+  opacity: 0.5;
+  -webkit-animation: footerCloudAnim 20s infinite linear;
+          animation: footerCloudAnim 20s infinite linear;
+}
+
+footer .footer-background.background-near {
+  opacity: .5;
+  width: 800%;
+  -webkit-animation: footerCloudAnim 85s infinite linear;
+          animation: footerCloudAnim 85s infinite linear;
+}
+
+footer .container {
+  position: relative;
+  z-index: 5;
 }
 
 footer .footer-bottom {
@@ -1153,6 +1241,178 @@ footer .copy-right p a {
   opacity: 1;
 }
 
+.white-navigation .swiper-button-disabled {
+  opacity: 0;
+}
+
+.white-navigation .swiper-button-prev, .white-navigation .swiper-button-next {
+  background: #fff;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.white-navigation .swiper-button-prev:hover::before, .white-navigation .swiper-button-next:hover::before {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+}
+
+.white-navigation .swiper-button-prev::before, .white-navigation .swiper-button-next::before {
+  position: absolute;
+  content: " ";
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  border-radius: 50%;
+  z-index: -1;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.white-navigation .swiper-button-prev::after, .white-navigation .swiper-button-next::after {
+  color: #333;
+  font-size: 17px;
+}
+
+.white-navigation .swiper-button-prev {
+  left: 10%;
+}
+
+.white-navigation .swiper-button-next {
+  right: 10%;
+}
+
+.testimonials {
+  position: relative;
+}
+
+.testimonials .swiper-pagination {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.testimonials .swiper-pagination .swiper-pagination-bullet {
+  background: #fff;
+  margin: 2px;
+  width: 10px;
+  height: 10px;
+}
+
+.inner-banner {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.inner-banner:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0)));
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0));
+  z-index: 2;
+}
+
+.inner-banner .ib-bg {
+  background-position: center !important;
+  background-size: cover !important;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.inner-banner .text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 4;
+  text-align: center;
+  color: #ffff;
+}
+
+.inner-banner .text h2 {
+  color: #fff;
+  width: 740px;
+  margin: auto;
+  font-size: 68px;
+  font-family: 'Ivy Mode';
+  font-weight: 600;
+  line-height: 1.18;
+  text-shadow: 1px 3px 1px rgba(72, 65, 65, 0.5);
+}
+
+.features {
+  background-color: #151727;
+  padding: 80px 0;
+}
+
+.feature-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.feature-card {
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.feature-card img {
+  width: 40px;
+  height: 40px;
+  margin-right: 20px;
+}
+
+.feature-card .card-desc p {
+  font-size: 12px;
+  margin-bottom: 5px;
+  line-height: 1;
+  text-transform: uppercase;
+  opacity: 0.8;
+}
+
+.feature-card .card-desc h6 {
+  color: #fff;
+  font-size: 20px;
+  line-height: 1;
+}
+
+.book-btn {
+  border: 0;
+  padding: 0 15px;
+  height: 62px;
+  text-transform: uppercase;
+  color: #fff;
+  background: #151727;
+  margin-top: 0px;
+  font-weight: 100;
+}
+
+.book-btn ion-icon {
+  margin-right: 5px;
+}
+
 @-webkit-keyframes rotation {
   from {
     -webkit-transform: rotate(0deg);
@@ -1172,6 +1432,108 @@ footer .copy-right p a {
   to {
     -webkit-transform: rotate(359deg);
             transform: rotate(359deg);
+  }
+}
+
+@-webkit-keyframes footerCloudAnim {
+  0% {
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+  to {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+@keyframes footerCloudAnim {
+  0% {
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+  to {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+@-webkit-keyframes moveCloud1 {
+  0% {
+    opacity: 1;
+    background-position: 0 0;
+  }
+  30% {
+    opacity: 0.5;
+  }
+  60% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+    background-position: 817px 0;
+  }
+}
+
+@keyframes moveCloud1 {
+  0% {
+    opacity: 1;
+    background-position: 0 0;
+  }
+  30% {
+    opacity: 0.5;
+  }
+  60% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+    background-position: 817px 0;
+  }
+}
+
+@-webkit-keyframes moveCloud2 {
+  0% {
+    opacity: 0.1;
+    background-position: 408px 0;
+  }
+  30% {
+    opacity: 0.4;
+  }
+  60% {
+    opacity: 0.2;
+  }
+  80% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0.4;
+    background-position: 1225px 0;
+  }
+}
+
+@keyframes moveCloud2 {
+  0% {
+    opacity: 0.1;
+    background-position: 408px 0;
+  }
+  30% {
+    opacity: 0.4;
+  }
+  60% {
+    opacity: 0.2;
+  }
+  80% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0.4;
+    background-position: 1225px 0;
   }
 }
 /*# sourceMappingURL=main.css.map */

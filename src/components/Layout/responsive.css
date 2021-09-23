@@ -1,3 +1,7 @@
+
+
+
+
 @media screen and (min-width: 1900px) {
 
 	.container {
@@ -194,9 +198,20 @@
         width: 150px;
     }
 
-    .footer-top .ft-card img {
-        width: 30px;
-        height: 30px; 
+    .feature-wrap {
+        justify-content: center;
+        flex-wrap: wrap;
     }
+
+    .feature-card {
+        width: 250px;
+        margin: 20px 0;
+    }
+    
+    .features  {
+        padding: 60px 0;
+    }
+
+
 
 }

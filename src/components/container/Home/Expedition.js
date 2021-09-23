@@ -1,22 +1,29 @@
-import React from 'react';
+import React  from 'react';
 
 import { Swiper, SwiperSlide } from "swiper/react";
-// import './swiper/swiper-bundle.css'
+
 
 import "swiper/swiper.scss";
-// import "swiper/css/pagination"
+import "swiper/components/navigation";
 
+import SwiperCore, {
+    Autoplay,Pagination,Navigation
+} from 'swiper';
 
+SwiperCore.use([Autoplay,Pagination,Navigation]);
 
 // import 'swiper/css';
 
 const Expedition = () => {
+
+
+
     return ( 
         <React.Fragment>
             <section className= "activities">
-                <Swiper slidesPerView={'auto'} centeredSlides={true} spaceBetween={30} pagination={{
-                "clickable": true
-                }} className="mySwiper">
+                <Swiper slidesPerView={'auto'} centeredSlides={true} spaceBetween={30} speed={500} freeMode={true} 
+                navigation={true} 
+                className="expedition white-navigation">
                     <SwiperSlide>
                         <div className="activity-head">
                             <div className="item-background">

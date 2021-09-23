@@ -6,10 +6,14 @@ import Destination from './Destination';
 import StoryFigure from './StoryFigure';
 import StoryData from '../Story/StoryData';
 import TopFooter from "./TopFooter";
-import Footer from "../../Footer/Footer";
-import FooterLogos from "../../Footer/FooterLogos";
+
 import Updates from './Updates';
-import {ButtonDark, ButtonWhite } from '../../Button'
+import {ButtonDark } from '../../Button'
+import TestimonialSlides from "./TestimonialSlides";
+import TestimonialData from "../Testimonial/TestimonialData";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/swiper.scss";
 
 
 const Home = () => {
@@ -23,7 +27,7 @@ const Home = () => {
             <Expedition />
             <Destination />
 
-            <section className="stories">
+            <section className="stories" style={{ background:'url(/images/star-background.png)' }}>
                 <div className="container">
                     <div className="scrub-head">
                         <h2>Inspriring stories</h2>
@@ -98,6 +102,29 @@ const Home = () => {
                                     Our Travelers
                                 </h4>
                             </div>
+
+                            <Swiper slidesPerView={1} pagination={true} centeredSlides={true} loop={true} speed={500}  
+                            className="testimonial ">
+                                {
+                                    TestimonialData.map((val, index) => {
+                                        return (
+                                            <SwiperSlide key={index}>
+                                                <TestimonialSlides 
+                                                
+                                                img={val.img}
+                                                name={val.name}
+                                                profession={val.profession}
+                                                testimonial= {val.testimonial} 
+
+                                                />
+                                            </SwiperSlide>
+                                        )
+                                    })
+                                }
+
+            
+
+                            </Swiper>
                         </div>
                     </div>
                 </div>
@@ -109,9 +136,7 @@ const Home = () => {
 
             <TopFooter />
 
-            <FooterLogos />           
-
-            <Footer />
+      
                         
 
         </React.Fragment>

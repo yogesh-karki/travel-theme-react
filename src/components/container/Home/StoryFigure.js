@@ -9,7 +9,7 @@ const StoryFigure = (props) => {
                 <img src={props.img} alt="" />
 
                 <div className="story-play">
-                    <a href="#">
+                    <a href="">
                         <img src="./images/assets/play.svg" alt="" />
                     </a>
                 </div>

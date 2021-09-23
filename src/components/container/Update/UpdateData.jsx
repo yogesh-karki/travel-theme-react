@@ -20,9 +20,6 @@ const UpdateData = [
         title: 'Mount Annapurna Summit',
         description: 'Are you willing to join us for two night Stay at Everest Base Camp? During this shoulder expedition season in spring at Everest Base Camp'
     },
-
-    
-    
     {
         img : './images/latest4.jpg',
         title: '1 Night Stay EBC Stay',
