@@ -20,7 +20,7 @@ const Expedition = () => {
 
     return ( 
         <React.Fragment>
-            <section className= "activities">
+            <section className= "activities" >
                 <Swiper slidesPerView={'auto'} centeredSlides={true} spaceBetween={30} speed={500} freeMode={true} 
                 navigation={true} 
                 className="expedition white-navigation">

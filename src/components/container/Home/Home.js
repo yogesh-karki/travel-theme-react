@@ -5,7 +5,7 @@ import Expedition from './Expedition';
 import Destination from './Destination';
 import StoryFigure from './StoryFigure';
 import StoryData from '../Story/StoryData';
-import TopFooter from "./TopFooter";
+// import TopFooter from "./TopFooter";
 
 import Updates from './Updates';
 import {ButtonDark } from '../../Button'
@@ -27,7 +27,7 @@ const Home = () => {
             <Expedition />
             <Destination />
 
-            <section className="stories" style={{ background:'url(/images/star-background.png)' }}>
+            <section className="stories" style={{ background:'url(/images/star-background.png)' }} >
                 <div className="container">
                     <div className="scrub-head">
                         <h2>Inspriring stories</h2>
@@ -134,7 +134,7 @@ const Home = () => {
                         
             <Updates />
 
-            <TopFooter />
+            {/* <TopFooter /> */}
 
       
                         

@@ -2,7 +2,7 @@ import React from 'react';
 
 const FooterLogos = () => {
     return ( 
-        <div className="footer-top">
+        <div className="footer-top" >
             <div className="container">
                 <div className="ft-wrap">
 

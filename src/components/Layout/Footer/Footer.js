@@ -3,7 +3,7 @@ import React from 'react'
 const Footer = () => {
     return ( 
         <React.Fragment>
-            <footer style = {{ background: 'url(/images/footer-background.png)' }}>
+            <footer style = {{ background: 'url(/images/footer-background.png)' }} >
                 <div className="footer-background background-far" style = {{ background: 'url(/images/clouds-far.png)' }}></div>
                 <div className="footer-background background-near" style = {{ background: 'url(/images/clouds-near.png)' }}></div>
 

@@ -3,6 +3,8 @@ import { Tabs } from 'antd';
 import Overview from './Overview';
 import Itinerary from './Itinerary';
 
+
+
 const { TabPane } = Tabs;
 
 const operations = <button className='book-btn'><ion-icon name="create-outline"></ion-icon> Book this trip</button>;
@@ -17,8 +19,12 @@ const TourDetailTabs = () => {
     }
 
     useEffect(() =>{
-        const test = document.querySelector(".tabs");
+        const test = document.querySelector(".tab-content .content-head h3");
         console.log(test);
+
+
+
+
     })
     
 

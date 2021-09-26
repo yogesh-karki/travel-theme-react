@@ -26,6 +26,36 @@ $dark-blue: #151727;
 
     color: #fff;
 }
+ 
+.loader-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: $base-color;
+
+    h1 {
+        color: #fff;
+        font-size: 2.5vw ;
+        text-transform: uppercase;
+        font-family: 'Ivy Mode';
+        font-weight: 600;
+        letter-spacing: 5px;
+    }
+
+    h2 {
+        color: #fff;
+        font-size: 1vw ;
+        margin-top: 10px;
+        letter-spacing: 5px
+    }
+}
 
 header {
     position: absolute;
@@ -914,6 +944,11 @@ header {
             font-size: 17px;
             font-weight: 200;
         }
+    }
+
+    .slider-wrap {
+        position: relative;
+        z-index: 2;
     }
 
     .latest-slider {

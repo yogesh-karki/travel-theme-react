@@ -5,7 +5,7 @@ import React from 'react';
 const Feature = () => {
     return ( 
         <React.Fragment>
-            <section className="features">
+            <section className="features" >
                 <div className="container">
                     <div className="feature-wrap">
                         <div className="feature-card">

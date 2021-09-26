@@ -4,10 +4,15 @@ import "swiper/swiper.scss";
 import UpdateCard from './UpdateCard';
 import UpdateData from '../Update/UpdateData';
 
+
 const Updates = () => {
+  
+
+ 
+
     return ( 
         <React.Fragment>
-            <section className="featured">
+            <section className="featured" >
                 <div className="container">
                     <div className="featured-head">
                         <span className="heading-subtitle">Never Too Late To Join Us</span>
@@ -19,29 +24,31 @@ const Updates = () => {
                         </p>
                     </div>
                 </div>
-
-                <Swiper slidesPerView={4} centeredSlides={true} spaceBetween={30}  navigation={true}  className="latest-slider white-navigation ">
-                        
-                    {
-                        UpdateData.map((val, index) => {
-                            return (
-                                <SwiperSlide key={index}>
-                                    <UpdateCard 
-                                    
-                                    img={val.img}
-                                    title={val.title}
-                                    description= {val.description} 
-
-                                    />
-                                </SwiperSlide>
-                            )
-                        })
-                    }
-                        
-                        
-
-
-                </Swiper>
+ 
+                <div className="slider-wrap" >
+                    <Swiper slidesPerView={4} centeredSlides={true} spaceBetween={30}  navigation={true}  className="latest-slider white-navigation ">
+                            
+                            {
+                                UpdateData.map((val, index) => {
+                                    return (
+                                        <SwiperSlide key={index}>
+                                            <UpdateCard 
+                                            
+                                            img={val.img}
+                                            title={val.title}
+                                            description= {val.description} 
+        
+                                            />
+                                        </SwiperSlide>
+                                    )
+                                })
+                            }
+                                
+                                
+        
+        
+                        </Swiper>
+                </div>
             </section>
         </React.Fragment>
      );

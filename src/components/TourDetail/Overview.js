@@ -6,7 +6,7 @@ import './style.css'
 const Overview = () => {
 
     return ( 
-        <section className="tab-content overview">
+        <section className="tab-content overview" >
             <div className="content-head">
                 <h3>Experience
                 <span style={{ background: 'url(/images/mount-after-01.svg)' }}></span>
@@ -32,13 +32,8 @@ const Overview = () => {
                 </p>
 
                 <p>
-                    The Base camp is situation just below the Rongbuk Monastery. It is about 20 km trek to reach
-                     the Advanced Base Camp (ABC). ABC is situated on rugged and fragmented ground with high speed
-                      winds welcoming you. From ABC to East Rongbuk Glacier, it’s fairly easy, following the snowy 
-                      slopes to the North col, you will reach Camp I. The camp I rests between Everest and Changtse.
-                      Following long snowy slope, you will reach the camp II. The course from camp II to camp III is 
-                      very stormy. Topography here is made up of rocks, which look fairly simple, but a slip here means 
-                      death. However, there are ropes in place, which gives some senses of safety.
+                    Topography here is made up of rocks, which look fairly simple, but a slip here means 
+                    death. However, there are ropes in place, which gives some senses of safety.
                 </p>
             </div>
 

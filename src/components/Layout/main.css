@@ -18,6 +18,44 @@
   border: 1px solid #fff;
 }
 
+.loader-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #0080C5;
+}
+
+.loader-wrapper h1 {
+  color: #fff;
+  font-size: 2.5vw;
+  text-transform: uppercase;
+  font-family: 'Ivy Mode';
+  font-weight: 600;
+  letter-spacing: 5px;
+}
+
+.loader-wrapper h2 {
+  color: #fff;
+  font-size: 1vw;
+  margin-top: 10px;
+  letter-spacing: 5px;
+}
+
 header {
   position: absolute;
   top: 0;
@@ -937,6 +975,11 @@ header .nav-container nav ul li a .nav-item .subtitle {
 .featured .featured-head p {
   font-size: 17px;
   font-weight: 200;
+}
+
+.featured .slider-wrap {
+  position: relative;
+  z-index: 2;
 }
 
 .featured .latest-slider {
