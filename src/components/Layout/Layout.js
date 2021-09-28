@@ -9,8 +9,13 @@ import LocoScroll from './Hooks/LocoScroll';
 
 
 
-
 const Layout = () => {
+    
+    
+
+
+
+
     const [preloader , setPreloader] = useState(true);
 
     LocoScroll(!preloader);
@@ -43,25 +48,19 @@ const Layout = () => {
 
 
     return ( 
-        <React.Fragment>
+
         
-        {preloader? <div className="loader-wrapper">
-            <h1>14 Peak Expediation</h1>
-            <h2>supporting mountain life</h2>
-        </div> : 
-                <div id="main-container"  >
-                    <NavBar />
-                    <Switch>
-                        <Route path="/" exact component={Home} ></Route>
-                        <Route path="/tour-detail" exact component={TourDetail} ></Route>
+        <div id="main-container"  >
+            <NavBar />
+            <Switch>
+                <Route path="/" exact component={Home} ></Route>
+                <Route path="/tour-detail" exact component={TourDetail} ></Route>
 
-                    </Switch>
-
-                    <FooterLogos />
-                    <Footer />
-                </div>
-        }
-        </React.Fragment>
+            </Switch>
+            <FooterLogos />
+            <Footer />
+        </div>
+     
      );
 }
  

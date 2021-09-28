@@ -5,7 +5,7 @@ import Expedition from './Expedition';
 import Destination from './Destination';
 import StoryFigure from './StoryFigure';
 import StoryData from '../Story/StoryData';
-// import TopFooter from "./TopFooter";
+import TopFooter from "./TopFooter";
 
 import Updates from './Updates';
 import {ButtonDark } from '../../Button'
@@ -131,13 +131,9 @@ const Home = () => {
             </section>
 
             
-                        
             <Updates />
 
-            {/* <TopFooter /> */}
-
-      
-                        
+            <TopFooter />     
 
         </React.Fragment>
      );

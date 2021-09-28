@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { useEffect } from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 
 import Layout from './components/Layout/Layout';
@@ -18,20 +18,19 @@ import './components/Layout/responsive.css';
 
 
 
-
-
-export default class App extends Component {
-  render() {
-    return (
+const App = () => {
+  
+  
+  return (  
         <Router>
-          <React.Fragment>
             <CustomCursor />
             
             <Layout />
-          </React.Fragment>
         </Router>
      
-    )
-  }
+    );
 }
+ 
+export default App;
+
 

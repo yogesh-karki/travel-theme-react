@@ -7,34 +7,66 @@ const Overview = () => {
 
     return ( 
         <section className="tab-content overview" >
-            <div className="content-head">
+            {/* <div className="content-head">
                 <h3>Experience
                 <span style={{ background: 'url(/images/mount-after-01.svg)' }}></span>
                 </h3>
-                
+            </div> */}
 
-            </div>
+            <h4 className='heading-style'>Experince the North face expedition Summit Pyramid, from here you will see the shining crystals from top of the world.</h4>
 
-            <div className="content-text">
-                <p>
-                    Talking about the north route, one climber noted, the North Face is a place
-                     where a simple slip would mean death. North face expedition mainly starts 
-                     from Tibet side. Chinese climbers claimed to have reached the top via north
-                      route for the first time in 1960, which was not accepted because of lacking
-                       photographic evidence. Reinhold Messner who is regarded as the greatest climber
-                        ever, he pioneered a new road on the north col face. He trekked the Northwest
-                         route for three days only himself from his base camp at 6,500 metres without 
-                         oxygen tanks for the first time in the history in 1980. In the same year Takashi
-                          Ozaki and Tsuneo Shigehiro become the first to scale Mount Everest from the 
-                          North Face. Climbing from the North side is a perfect opportunity to see how you 
-                          perform at an extreme altitude. North Face-NE Ridge is a perfect choice to make
-                           the success happen without less crowd comparing to south every year.
-                </p>
+            <div className="row ">
+                <div className="col-md-9">
+                    
+                    <div className="content-text padding-right">
+                        <div className="overview-short">
+                            <p>
+                                Talking about the north route, one climber noted, the North Face is a place
+                                where a simple slip would mean death. North face expedition mainly starts 
+                                from Tibet side. Chinese climbers claimed to have reached the top via north
+                                route for the first time in 1960, which was not accepted because of lacking
+                                photographic evidence. 
+                            </p>
 
-                <p>
-                    Topography here is made up of rocks, which look fairly simple, but a slip here means 
-                    death. However, there are ropes in place, which gives some senses of safety.
-                </p>
+                            <p>
+                            he Base camp is situation just below the Rongbuk Monastery. It is about 20 km trek to reach the Advanced Base Camp (ABC).
+                            ABC is situated on rugged and fragmented ground with high speed winds welcoming you. From ABC to East Rongbuk Glacier,
+                             it’s fairly easy, following the snowy slopes to the North col, you will reach Camp I. The camp I rests between Everest 
+                             and Changtse. Following long snowy slope, you will reach the camp II. The course from camp II to camp III is very stormy
+                              Topography here is made up of rocks, which look fairly simple, but a slip here means death. However,
+                               there are ropes in place, which gives some senses of safety. From camp III, climbers will feel the 
+                               need of oxygen; the route from camp III to camp IV is mixture of rocky steps. On this way you will find 
+                               fixed ropes, which will lead you to right direction to the mountain. Camp IV is small camp; you will want 
+                               to spend as little time here as possible.
+                            </p>
+
+                            <p>
+                                You will continue onto the North East Ridge, where you will encounter 
+                               the first obstacle known as the first step. First step is rock structure about 30 meters high. Some steep rock 
+                               climbing will lead you to second steps; second step is the most challenging of the entire obstacle. This is about 
+                               40m in height. 
+                            </p>
+
+                            <div className="trip-highlights">
+                                <label className="small-heads">Trip Highlights</label>
+                                <ul>
+                                    <li>Old Thingri to Chinese Basecamp (5,100m), Via Rombuk Monastery</li>
+                                    <li>Nights Stay in Chinese Basecamp</li>
+                                    <li>Drive back from Chinese Basecamp to Thingri</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div className="col-md-3">
+                    <div className="travel-guide">
+                        <img src="./images/story/story-tashi.jpg" alt="" />
+                        <h5>Tashi Lakpa Sherpa</h5>
+                        <p>Expedition Specialist</p>
+                    </div>
+                </div>
             </div>
 
             <div className="itinerary-options">
