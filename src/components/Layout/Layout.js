@@ -5,43 +5,48 @@ import Footer from "./Footer/Footer";
 import FooterLogos from "./Footer/FooterLogos";
 import Home from '../container/Home/Home';
 import TourDetail from '../TourDetail/TourDetail'
-import LocoScroll from './Hooks/LocoScroll';
+import locomotiveScroll from "locomotive-scroll";
 
 
 
 const Layout = () => {
     
-    
+    const scrollRef = useRef();
 
 
+    useEffect(() => {
+        const scroll = new locomotiveScroll({
+          el: scrollRef.current,
+          smooth: true
+        });
+    });
 
+    // const [preloader , setPreloader] = useState(true);
 
-    const [preloader , setPreloader] = useState(true);
-
-    LocoScroll(!preloader);
+    // LocoScroll(!preloader);
 
    
 
-    const [timer, setTimer] = useState(3);
+    // const [timer, setTimer] = useState(3);
 
-    const id = useRef(null)
+    // const id = useRef(null)
 
-    const clear = ()=> {
-        window.clearInterval(id.current);
-        setPreloader(false);
-    }
+    // const clear = ()=> {
+    //     window.clearInterval(id.current);
+    //     setPreloader(false);
+    // }
 
-    useEffect(() =>{
-        id.current= window.setInterval(()=> {
-            setTimer((timer)=> timer-1)
-        }, 3000)
-    },[])
+    // useEffect(() =>{
+    //     id.current= window.setInterval(()=> {
+    //         setTimer((timer)=> timer-1)
+    //     }, 3000)
+    // },[])
 
-    useEffect(() =>{
-        if(timer=== 0) {
-            clear();
-        }
-    },[timer])
+    // useEffect(() =>{
+    //     if(timer=== 0) {
+    //         clear();
+    //     }
+    // },[timer])
 
     
     
@@ -50,7 +55,7 @@ const Layout = () => {
     return ( 
 
         
-        <div id="main-container"  >
+        <div id="main-container" ref={scrollRef}  data-scroll data-scroll-speed="3" data-scroll-position="top">
             <NavBar />
             <Switch>
                 <Route path="/" exact component={Home} ></Route>

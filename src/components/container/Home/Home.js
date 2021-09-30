@@ -27,7 +27,7 @@ const Home = () => {
             <Expedition />
             <Destination />
 
-            <section className="stories" style={{ background:'url(/images/star-background.png)' }} >
+            <section className="stories" style={{ background:'url(/images/star-background.png)' }}  >
                 <div className="container">
                     <div className="scrub-head">
                         <h2>Inspriring stories</h2>
@@ -74,7 +74,7 @@ const Home = () => {
             </section>
 
 
-            <section className="tailor-made" >
+            <section className="tailor-made"  >
                 <div className="container">
                     <div className="tm-wrap">
                         <div className="tm-article" style={{ background:'url(/images/tailor-made.png)' }}>

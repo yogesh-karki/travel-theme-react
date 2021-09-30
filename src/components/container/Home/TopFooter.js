@@ -98,7 +98,7 @@ const TopFooter = () => {
     })
 
     return ( 
-        <section className="anim-wrap"  >
+        <section className="anim-wrap" >
             <section className="footer-animations">
                     <img src="./images/footer/top.png" alt="" ref={topImg} className="top-img" /> 
                     <img src="./images/footer/clouds.png" alt="" ref={cloudLeft} className="cloud cloud-left" />

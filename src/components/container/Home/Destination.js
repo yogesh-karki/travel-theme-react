@@ -7,7 +7,7 @@ const Destination = () => {
 
     return ( 
         <React.Fragment>
-            <section className="destinations" style = {{ background: 'url(/images/destinations-background.png)' }} >
+            <section className="destinations" style = {{ background: 'url(/images/destinations-background.png)' }}  >
                 <div className="destination-cloud "></div>
 
                 <div className="container">

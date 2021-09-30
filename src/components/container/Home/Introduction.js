@@ -3,7 +3,7 @@ import React from "react";
 const Introduction = () => {
     return ( 
         <React.Fragment>
-            <section className="intro-container" >
+            <section className="intro-container"  >
                 <div className="container">
                     <div className="row">
                         <div className="col-md-8">
